@@ -9,7 +9,7 @@ function arrayToString(a) {
 
 String.prototype.seed = String.prototype.seed || Math.round(Math.random() * Math.pow(2, 32));
 
-String.prototype.hashCode = function () {
+function stringHashCode() {
     var remainder, bytes, h1, h1b, c1, c1b, c2, c2b, k1, i,
         key = this.toString();
 
@@ -70,7 +70,7 @@ function standardEqualsFunction(a, b) {
 }
 
 function standardHashCodeFunction(a) {
-    return a.hashCode();
+    return typeof a === 'string' ? stringHashCode.call(a) : a.hashCode();
 }
 
 function Set(hashFunction, equalsFunction) {

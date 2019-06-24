@@ -2,7 +2,7 @@
 
 JavaScript runtime libraries for ANTLR 4
 
-This runtime is small modification of the original ANTLR 4 JavaScript  runtime that avoids patching the prototype of ``String``.
+This runtime is a small modification of the original ANTLR 4 JavaScript runtime that avoids patching ``String.prototype.hashCode``.
 
 This runtime has been tested in Node.js, Safari, Firefox, Chrome and IE.
 
